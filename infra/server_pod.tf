@@ -2,11 +2,10 @@ resource "kubernetes_pod" "server-pod" {
   metadata {
     name = "server"
   }
-  
   spec {
-    container {
+    container  {
       image = "lucabecci/express_svc"
-      value = "server"
+      name = "server"
       env {
         name = "PORT"
         value = 8080
@@ -28,10 +27,9 @@ resource "kubernetes_pod" "server-pod" {
           path = "/"
           port = 8080
         }
+        initial_delay_seconds = 3
+        period_seconds = 3
       }
-
-      initial_delay_seconds = 3
-      period_seconds = 3
     }
   }
 }
