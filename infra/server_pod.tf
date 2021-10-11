@@ -1,6 +1,9 @@
 resource "kubernetes_pod" "server-pod" {
   metadata {
     name = "server"
+    labels = {
+      "app" = "server"
+    }
   }
   spec {
     container  {
