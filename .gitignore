@@ -16,7 +16,8 @@
 *_BASE_*.txt
 *_LOCAL_*.txt
 *_REMOTE_*.txt
-
+.env
+*/kubeconfig.yaml
 ### Terraform ###
 # Local .terraform directories
 **/.terraform/*
