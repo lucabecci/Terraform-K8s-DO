@@ -5,7 +5,7 @@ resource "kubernetes_pod" "server-pod" {
   
   spec {
     container {
-      image = "lucabecci/express-svc"
+      image = "lucabecci/express_svc"
       value = "server"
       env {
         name = "PORT"
